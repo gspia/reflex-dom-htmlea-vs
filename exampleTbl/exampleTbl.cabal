@@ -1,0 +1,45 @@
+name:                exampleTbl
+version:             0.1.0.0
+synopsis:            Table examples with vector-sized
+description:         Table examples with vector-sized
+license:             BSD3
+author:              gspia
+maintainer:          Use github to contact gspia
+copyright:           All rights reserved, gspia
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.24
+
+library
+  exposed-modules:     MainW2
+  hs-source-dirs:      libTbl
+  default-language:    Haskell2010
+  build-depends:        base
+                      , containers
+                      , data-default
+                      , lens
+                      , text
+                      , ghcjs-dom
+                      , reflex
+                      , reflex-dom
+                      , reflex-dom-htmlea
+                      , reflex-dom-htmlea-vs
+                      , jsaddle
+                      , vector-sized
+                      , finite-typelits
+                      , singletons
+
+executable exampleTbl
+  main-is:           Main.hs
+  hs-source-dirs:    app
+  default-language:  Haskell2010
+  build-depends:       base
+                     , exampleTbl
+                     , reflex-dom
+                     , reflex-dom-core
+  ghc-options: -Wall -Wincomplete-uni-patterns 
+               -O2 -threaded -rtsopts -with-rtsopts=-N
+               -Wincomplete-record-updates 
+               -Wmissing-import-lists 
+               -Wno-redundant-constraints
+

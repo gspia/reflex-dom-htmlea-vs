@@ -1,0 +1,9 @@
+:set -ilib/src:exampleTbl/libTbl:test
+:set prompt "> "
+
+-- With ghci
+--
+-- After :load MainW2, just use :reload
+--
+:def! reload (const $ return "::reload\nLanguage.Javascript.JSaddle.Warp.debug 8000 mainW")
+
